@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head>
-<title>Gigyasa</title>
+<title>Jigyasa</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -17,9 +17,12 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	  <link href="<c:url value="/style.css" />" rel="stylesheet">
+	<%-- 
 <link rel="stylesheet" type="text/css"
 	href="<spring:url value="/stylesheet/style.css"/>" />
-	
+	 --%>
 	<style>
 	td {
     padding-top: .5em;
@@ -57,7 +60,7 @@
 	</nav>
 
 	<div class="jumbotron text-center">
-		<h1>Gigyasa</h1>
+		<h1>Jigyasa</h1>
 		<p>where dreamers architect their dreams</p>
 	</div>
 
@@ -70,7 +73,7 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Please fill the below fields</h4>
 				</div>
-				<form:form id="mysignin" action="" method="post">
+				<form:form id="signin" action="home" method="post">
 					<div class="modal-body">
 						<table id="myTable">
 							<tr>
