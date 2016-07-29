@@ -5,6 +5,8 @@
  
 <hibernate-configuration>
     <session-factory>
-        <mapping class="com.kesho.model.User" />
+        <mapping class="com.sims.model.User" />
+        <mapping class="com.sims.model.Lecture"/>
+        <mapping class="com.sims.model.Subject" />
     </session-factory>
 </hibernate-configuration>
