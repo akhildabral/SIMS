@@ -61,24 +61,13 @@
     <div class="row">
     <div class="col-md-2"><blockquote class="blockquote-reverse" style="border-right: 0px; padding-right: 0px;"> Subjects </blockquote></div>
     <div class="col-md-10">
+    
 	<c:forEach items="${subjects}" var="sub">
 	    <div class="row">
     <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" value="${sub.subjectName}" disabled></div>
-<%--     <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" value="${sub.subjectName}" disabled></div>
-  </div><br>
-      <div class="row">
-    <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" disabled></div>
-    <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" disabled></div>
-  </div><br>
-      <div class="row">
-    <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" disabled></div>
-    <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" disabled></div>
-  </div><br>
-      <div class="row">
-    <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" disabled></div>
-    <div class="col-md-6 disabled"><input type="text" class="form-control input-lg" id="inputlg" disabled></div> --%>
   </div><br>
 	</c:forEach> 
+	
 	</div>
   </div>
   

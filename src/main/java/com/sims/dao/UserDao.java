@@ -2,6 +2,8 @@ package com.sims.dao;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -12,21 +14,13 @@ import com.sims.daoInterface.UserDaoInterface;
 import com.sims.model.User;
 
 @Repository
-public class UserDao implements UserDaoInterface{
+public class UserDao implements UserDaoInterface {
 
 	@Autowired
-    private SessionFactory sessionFactory;
-	
-/*	@Override
-	public void userValidate(String email) {
-		// TODO Auto-generated method stub
-		//User user = (User) sessionFactory.getCurrentSession().load(User.class, email);
-		System.out.println("m in DAO");
-		//System.out.println("----------"+user);
-	}*/
-	
+	private SessionFactory sessionFactory;
+
 	@Override
-	public List<User> validateUser(){
+	public List<User> validateUser() {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		String hql = "From User";
@@ -41,7 +35,7 @@ public class UserDao implements UserDaoInterface{
 	public List<User> currentUser(int id) {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "From User where userId="+id;
+		String hql = "From User where userId=" + id;
 		@SuppressWarnings("unchecked")
 		List<User> currentUser = (List<User>) session.createQuery(hql).list();
 		tx.commit();
@@ -49,4 +43,13 @@ public class UserDao implements UserDaoInterface{
 		return currentUser;
 	}
 
-}
+	@SuppressWarnings({ "unchecked"})
+	@Override
+	public List<Object> subjectMarks(int userId, int testId) {
+	    	  Session session = sessionFactory.openSession();
+	          String sql = "select * FROM student_test where userId="+userId+" AND testId="+testId;
+	          SQLQuery query = session.createSQLQuery(sql);
+	          query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
+	          List<Object> data = query.list();
+	return data;
+}}

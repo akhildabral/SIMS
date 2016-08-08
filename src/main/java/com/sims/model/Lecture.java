@@ -83,6 +83,5 @@ public class Lecture {
 	public void setSubjects(Set<Subject> subjects) {
 		this.subjects = subjects;
 	}
-
 	
 }

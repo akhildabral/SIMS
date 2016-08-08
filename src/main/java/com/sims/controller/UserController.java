@@ -1,6 +1,6 @@
 package com.sims.controller;
 
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -74,7 +74,6 @@ public class UserController{
 		List<User> user = userservice.currentUser(userSessionId);
 		for (User userList : user) {
 			model.addAttribute("user", userList);
-			@SuppressWarnings("unchecked")
 			Set<Subject> subjects = (Set<Subject>) userList.getLecture().getSubjects();
 			model.addAttribute("subjects", subjects);
 		}
@@ -82,8 +81,29 @@ public class UserController{
 	}
 	
 	@RequestMapping("studentMarks")
-	public String getStudentMarks(){
+	public String getStudentMarks(Model model){
+		List<User> user = userservice.currentUser(userSessionId);
+		for (User userList : user) {
+			//Set<Test> testName = userList.getStudentTest();
+			model.addAttribute("testName", userList.getStudentTest());
+			//System.out.println(testName);  it will not display
+		}
 		return "studentMarks";
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@RequestMapping("studentExamMarks")
+	public String getStudentExamMarks(HttpServletRequest request, Model model){
+		System.out.println("-------------");
+		System.out.println(request.getParameter("newfield"));
+		List<Object> marks = userservice.subjectMarks(userSessionId, 601);
+/*	     for(Object object : marks)
+         {
+            HashMap row = (HashMap)object;
+            System.out.print(row.get("subjectId")+"  ");
+            System.out.println(row.get("marks"));
+         }*/
+		return "studentExamMarks";
 	}
 	
 	@RequestMapping("studentAssignment")

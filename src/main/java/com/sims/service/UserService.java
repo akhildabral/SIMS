@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sims.daoInterface.UserDaoInterface;
+import com.sims.model.Subject;
 import com.sims.model.User;
 import com.sims.serviceInterface.UserServiceInterface;
 
@@ -32,6 +33,13 @@ public class UserService implements UserServiceInterface {
 	public List<User> currentUser(int id) {
 		// TODO Auto-generated method stub
 		return userdao.currentUser(id);
+	}
+
+	@Override
+	@Transactional
+	public List subjectMarks(int userId, int testId) {
+		// TODO Auto-generated method stub
+		return userdao.subjectMarks(userId, testId);
 	}
 
 }
