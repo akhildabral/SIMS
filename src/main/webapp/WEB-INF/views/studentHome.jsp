@@ -59,7 +59,7 @@ body {
 
 	<spring:url value="/" var="homeFrame"></spring:url>
 	<spring:url value="/" var="studentProfile"></spring:url>
-	<spring:url value="/" var="studentMarks"></spring:url>
+	<spring:url value="student" var="studentMarks"></spring:url>
 	<spring:url value="/" var="studentAssignment"></spring:url>
 	<spring:url value="/" var="studentAttendance"></spring:url>
 	<spring:url value="/" var="signout"></spring:url>
@@ -82,7 +82,7 @@ body {
 				<li><a href="studentMarks" target="iframe_a">Marks</a></li>
 				<li><a href="studentAssignment" target="iframe_a">Assignment</a></li>
 				<li><a href="studentAttendance" target="iframe_a">Attendance</a></li>
-				<li><a href=signout>Logout</a></li>
+				<li><a href="signout">Logout</a></li>
 			</ul>
 		</div>
 	</div>
@@ -90,7 +90,6 @@ body {
 
 	<div id="frame">
 		<iframe height="800px" width="100%" src="homeFrame" name="iframe_a" style="margin: 0px; border: 0px"></iframe>
-			<!-- <p><a href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p> -->
 	</div>
 </body>
 </html>

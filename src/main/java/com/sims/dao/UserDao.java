@@ -45,11 +45,11 @@ public class UserDao implements UserDaoInterface {
 
 	@SuppressWarnings({ "unchecked"})
 	@Override
-	public List<Object> subjectMarks(int userId, int testId) {
+	public List<Object[]> subjectMarks(int userId, int testId) {
 	    	  Session session = sessionFactory.openSession();
-	          String sql = "select * FROM student_test where userId="+userId+" AND testId="+testId;
+	          String sql = "select subjectId, marks FROM student_test where userId="+userId+" AND testId="+testId;
 	          SQLQuery query = session.createSQLQuery(sql);
 	          query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
-	          List<Object> data = query.list();
-	return data;
+	          List<Object[]> result = query.list();
+	return result;
 }}

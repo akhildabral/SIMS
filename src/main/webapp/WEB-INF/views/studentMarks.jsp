@@ -48,22 +48,28 @@ body {
 </style>
 </head>
 <body>
-	<spring:url value="/" var="studentExamMarks"></spring:url>
+	<%-- <spring:url value="/" var="studentExamMarks"></spring:url> --%>
 <div class="container">
   
 <div id="nav">
-  <ul>
+<form:form action="studentExamMarks" method="post" target="marksFrame">
+
+ <ul>
   	<c:forEach items="${testName}" var="test">
-    <li><a href="studentExamMarks" target="marksFrame">
-    <button type="button" class="btn btn-success">${test.testName}</button>
-    <input type='text' id='newfield' name='newfield' value="${test.testId}" />
-    </a></li>
+  	
+    <li>
+    <input type='hidden' name='testx' value="${test.testId}" />
+	<input type="submit" class="btn btn-default" value="${test.testName}">
+    </li>
     </c:forEach> 
   </ul>
+
+
+</form:form>
 </div>
 
 <div id="section">
- <iframe height="600px" width="100%" src="welcome" name="marksFrame" style="border:0;"></iframe>
+  <iframe height="600px" width="100%" src="welcome" name="marksFrame" style="border:0;"></iframe>
  </div>
 
 </div>

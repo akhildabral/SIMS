@@ -1,7 +1,6 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,12 +8,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>Admin Portal</title>
 
 <style type="text/css">
@@ -57,7 +53,9 @@ body {
 </head>
 <body>
 
-		<spring:url value="/" var="homeFrame"></spring:url>
+			<spring:url value="" var="homeFrame"></spring:url>
+			<spring:url value="/" var="addUser"></spring:url>
+			<spring:url value="/" var="deleteUser"></spring:url>
 		
 	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
@@ -72,11 +70,11 @@ body {
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#about">Profile</a></li>
-				<li><a href="#achievements">Marks</a></li>
-				<li><a href="#fees">Assignment</a></li>
-				<li><a href="#contact">Attendance</a></li>
-				<li><a href="#contact">Logout</a></li>
+				<li><a href="addUser" target="iframe_a">Add</a></li>
+				<li><a href="deleteUser" target="iframe_a">Delete</a></li>
+				<li><a href="updateUser" target="iframe_a">Update</a></li>
+				<!-- <li><a href="studentAttendance" target="iframe_a">Attendance</a></li> -->
+				<li><a href=signout>Logout</a></li>
 			</ul>
 		</div>
 	</div>

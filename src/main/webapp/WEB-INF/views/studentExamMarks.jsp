@@ -9,8 +9,8 @@
 </head>
 <body>
 <h1>seasonal marks</h1>
-<%-- <c:forEach items="${marks}" var="marksr">
+ <c:forEach items="${marks}" var="marksr">
 <p>${marksr.subjectId}${marksr.marks} </p>
-</c:forEach>  --%>
+</c:forEach>
 </body>
 </html>
