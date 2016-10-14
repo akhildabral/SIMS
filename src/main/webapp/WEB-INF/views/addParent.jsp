@@ -48,25 +48,6 @@
     <div class="col-md-10"><input type="text" class="form-control input-lg" id="inputlg"></div>
   	</div>
   	
-  	<div class="row">
-    <div class="col-md-2"><blockquote class="blockquote-reverse" style="border-right: 0px; padding-right: 0px;"> Picture </blockquote></div>
-    <div class="col-md-10"><input type="text" class="form-control input-lg" id="inputlg"></div>
-  	</div>
-  	
-  	
-  	<div class="row">
-    <div class="col-md-2"><blockquote class="blockquote-reverse" style="border-right: 0px; padding-right: 0px;"> Picture </blockquote></div>
-    <div class="col-md-10"><input type="text" class="form-control input-lg" id="inputlg"></div>
-  	</div>
-  	<div class="row">
-    <div class="col-md-2"><blockquote class="blockquote-reverse" style="border-right: 0px; padding-right: 0px;"> Parent </blockquote></div>
-    <div class="col-md-10"><input type="text" class="form-control input-lg" id="inputlg"></div>
-  	</div>
-  	<div class="row">
-    <div class="col-md-2"><blockquote class="blockquote-reverse" style="border-right: 0px; padding-right: 0px;"> Class </blockquote></div>
-    <div class="col-md-10"><input type="text" class="form-control input-lg" id="inputlg"></div>
-  	</div>
-  	
       <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-10"><button type="button" class="btn btn-primary btn-block" style="padding-top: 10px; padding-bottom: 10px; height: 46px;">Add Record</button></div>

@@ -43,13 +43,13 @@ public class HomeController {
 				sess.setAttribute("displayName", firstName);
 				switch(userIdentity){
 				case 201:
-					return "redirect:/student";
+					return "redirect:/student/";
 				case 202:
-					return "redirect:/parent";
+					return "redirect:/parent/";
 				case 203:
-					return "redirect:/faculty";
+					return "redirect:/faculty/";
 				case 204:
-					return "redirect:/admin";
+					return "redirect:/admin/";
 				default:
 					return "redirect:/";
 				}

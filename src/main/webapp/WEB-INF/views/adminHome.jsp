@@ -53,9 +53,9 @@ body {
 </head>
 <body>
 
-			<spring:url value="" var="homeFrame"></spring:url>
-			<spring:url value="/" var="addUser"></spring:url>
-			<spring:url value="/" var="deleteUser"></spring:url>
+			<spring:url value="/admin" var="homeFrame"></spring:url>
+			<spring:url value="/admin" var="addRecord"></spring:url>
+			<spring:url value="/admin" var="deleteUser"></spring:url>
 		
 	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
@@ -70,7 +70,7 @@ body {
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="addUser" target="iframe_a">Add</a></li>
+				<li><a href="addRecord" target="iframe_a">Add</a></li>
 				<li><a href="deleteUser" target="iframe_a">Delete</a></li>
 				<li><a href="updateUser" target="iframe_a">Update</a></li>
 				<!-- <li><a href="studentAttendance" target="iframe_a">Attendance</a></li> -->
@@ -81,7 +81,7 @@ body {
 	</nav>
 	
 	<div id="frame">
-		<iframe height="800px" width="100%" src="homeFrame" name="iframe_a" style="margin: 0px; border: 0px "></iframe>
+		<iframe height="600px" width="100%" src="homeFrame" name="iframe_a" style="margin: 0px; border: 0px "></iframe>
 	</div>
 </body>
 </html>
